@@ -11,14 +11,18 @@
 </head>
 
 <body onload="initGame(4,2)">
-    <div class="wrapper">  
+    <div class="wrapper">
         <h1>Welcome to Mine Sweeper</h1>
         <div class="buttons-container">
-                <button onclick="initGame(4,2)">Beginner</button>
-                <button onclick="initGame(8,12)">Medium</button>
-                <button onclick="initGame(12,30)">Expert</button>
-            </div> 
-            <nav><p class="time">Game Time: 0:0 minutes</p></nav>
+            <button onclick="initGame(4,2)">Beginner</button>
+            <button onclick="initGame(8,12)">Medium</button>
+            <button onclick="initGame(12,30)">Expert</button>
+        </div>
+        <nav>
+            <p class="time">Game Time: 0:0 minutes</p>
+            <p class="hint"><span class='hint-txt'>&nbsp; press for hint you have 3 more</span>
+            <button onclick="hint()">hint</button></p>
+        </nav>
         <div class="board-container"></div>
     </div>
     <script src="js/utils.js"></script>

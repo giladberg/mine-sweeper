@@ -1,4 +1,6 @@
-
+body{
+   
+}
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -20,6 +22,9 @@
     
     
 }
+nav{
+    display: flex;
+}
 
 .hidden{
     visibility: hidden;
@@ -27,4 +32,8 @@
 .visible{
     visibility: visible;
 }
+.hintCell:hover{
+    background-color: yellow;
+}
+
 
