@@ -1,0 +1,30 @@
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.board-container{
+    display: flex;
+    justify-content:center;
+}
+
+.board-container td{
+    height:30px;
+    width:30px;
+}
+.board-container td div{
+    display: flex;
+    justify-content:center;
+    
+    
+}
+
+.hidden{
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}
+
