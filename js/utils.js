@@ -16,8 +16,11 @@ function timer() {
     var timePassed = Date.now() - gGame.time.start;
     var seconds = Math.floor((timePassed % (1000 * 60)) / 1000);
     var minutes = Math.floor((timePassed % (1000 * 60 * 60)) / (1000 * 60));
-    var ElTimer = document.querySelector(`.time`);
-    ElTimer.innerText = `Game Time: ${minutes}:${seconds} minutes`
+    if(seconds<10)seconds=`0${seconds}`
+    if(minutes<10)minutes=`0${minutes}`
+    gElTimer.innerText = ` ${minutes}:${seconds}`
+    var color =getRandomColor()
+    gElTimer.style=`border:4px dotted ${color}; color:${color};`
 }
 
 function countNeighboars(pos,board) {
@@ -36,3 +39,37 @@ function countNeighboars(pos,board) {
     }
     return neighboarsCount;
 }
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  function printLife(){
+    var life='❤️'
+    var dead='🖤'
+    var strHTML='<p>life</p>'
+    for(var i =3-gGame.life;i>0;i--){
+        strHTML+=`<span class="life">${dead}</span>`
+    }
+    for(var i =0;i<gGame.life;i++){
+        strHTML+=`<span class="life">${life}</span>`
+    }
+    gElLife.innerHTML=strHTML
+  }
+
+  function printHints(){
+      var off='<img src="./photo/hint.png" alt="">';
+      var on='<img src="./photo/light.png" alt="">';
+      var strHTML='<button onclick="useHint()">hint</button>'
+      for(var i=0;i<gGame.hint.count;i++){
+          strHTML+=on;
+      }
+      for (var i=gGame.hint.count;i<3;i++){
+        strHTML+=off
+      }
+      gElHint.innerHTML=strHTML
+  }
