@@ -13,10 +13,15 @@
 <body onload="initGame(4,2)">
     <div class="wrapper">
         <div class="clock">00:00</div>
+        <div class="bestTime">No best time yet</div>
         <div class="lifes"></div>
         <div class="hints"></div>
-        <div class="modal"><p></p></div>
-        <h1>Welcome to Mine Sweeper</h1>
+        <button class="safe-click" onclick="safeClick()">3 Safe click</button>
+        <button class="manually-position" onclick="manuallyPosition()">Manually position</button>
+        <div class="modal">
+            <p></p>
+        </div>
+        <h1 class="title">Welcome to Mine Sweeper</h1>
         <div class="buttons-container">
             <button onclick="initGame(4,2)">Beginner</button>
             <button onclick="initGame(8,12)">Medium</button>
@@ -26,7 +31,7 @@
             <button class="smiley-btn" onclick="initGame()">
                 <p class="smiley"></p>
             </button>
-           
+
         </nav>
         <div class="board-container"></div>
     </div>

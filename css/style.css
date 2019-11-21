@@ -22,6 +22,16 @@ body{
     font-size: 29px;
     padding: 2px;
 }
+.bestTime{
+    position:absolute;
+    top:3px;
+    right:150px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-size:20px;
+}
 
 .lifes{
     display: flex;
@@ -63,6 +73,22 @@ body{
     background-color: gold;
     color: black;
   }
+
+  .safe-click{
+      position:absolute;
+      top:3px;
+      left:226px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding:8px;
+      border-radius: 10px;
+      background-color: #00FF00;
+      color:white;
+  }
+  .safe-click:hover{
+    background-color: white;
+    color:#00FF00; 
+  }
 .board-container{
     display: flex;
     justify-content:center;
@@ -103,6 +129,9 @@ nav{
 .success{
     background-color: #ADFF2F;
 }
+.safe{
+    background-color: orange;
+}
 
 .smiley-btn{
 width:25px;
@@ -136,6 +165,20 @@ button{
 .buttons-container button:hover{
     background-color: black;
     color:#DC143C
+}
+.manually-position{
+    position:absolute;
+    margin:10px;
+    padding:12px;
+    top:70px;
+    left:204px;
+    background-color: #FF8C00;
+    color:white;
+    border-radius: 10px;
+}
+.manually-position:hover{
+    background-color: white;
+    color:#FF8C00;
 }
 
 .modal{
